@@ -1,0 +1,25 @@
+{
+  "name": "safelife-ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "dev": "concurrently --names \"Backend,Frontend\" --prefix \"[{name}]\" --prefix-colors blue.bold,cyan.bold \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd Backend && npm start",
+    "frontend": "cd mobile-app && npx expo start --clear",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
